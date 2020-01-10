@@ -1,0 +1,71 @@
+---
+title: "WeekOne"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Bio 151H
+
+Welcome to Bio151H! This semester, we will discuss the fundamental principles that underly the amazing breadth of animals, plants, and microbes that we see on Earth.
+
+This will be a unique class experience, in that we won't just be learning biology, we'll be using computation and data analysis alongside these concepts to enhance our understanding of the biology.
+
+## Course policies
+
+### Homework
+
+Each non-exam Friday, at 5 PM, a homework will be posted to Moodle. This homework will be due the following Friday at 5 PM. For example, next week's homework will cover next weeks lectures. This ensures that if you are absent, you have time to either meet with classmates or with me to catch up befor the homework is due. Because you have a whole week, I do not accept late work unless you've asked for an extension.
+
+### Office Hours
+
+MW 9-11:15, TH 1-3
+
+### Exams
+
+Exams will be worth 100 points each. The final will be cumulative and worth 100 points.
+
+
+## R and RStudio
+
+
+We will be doing our data analysis exercises via R and RStudio. R is an open-source scientfic programming language used in many fields of biology. 
+
+You were emailed a link this morning. Please open it, and go through the registration steps.
+
+We're going to try some very, very simple R exercises. 
+
+First, let's read in some data.
+
+```
+masses <- read_csv("BodyMassData.csv")
+```
+
+What we've done in the above command is read in a data file that is on our computers, and assign it to a variable. A variable is something in the computer's memory. Think of it like labeling your leftovers in the fridge. Later on, when we want to use the data, we call it back using the name.
+
+Have a look at the file. What is in here? 
+
+
+Talk to the person next to you for a moment. How do you think body mass interacts with latitude? 
+
+We're going to test this now by plotting the data.
+
+```
+ggplot(final, mapping = aes(x = Latitude, y = Mass)) +
+    geom_point() 
+    
+```
+
+Discussion question:
+
+What pattern do you think these data would have shown if the hypothesis were true? Do you think it is? 
+
+```
+
+Enter your answer here
+
+```
+
+

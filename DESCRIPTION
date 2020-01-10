@@ -1,0 +1,21 @@
+Package: GBIO151H
+Type: Package
+Title: Intro Bio Spring 2020
+Version: 0.1.0
+Authors@R: person("April", "Wright", role = c("aut", "cre"),
+	email = "april.wright@selu.edu")
+Description: R package for course materials
+License: MIT + file LICENSE
+Depends:
+	shiny
+Imports:
+    ggplot2,
+Suggests:
+    knitr,
+    testthat,
+    rmarkdown,
+    Biostrings,
+    covr
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1

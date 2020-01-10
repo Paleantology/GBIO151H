@@ -1,0 +1,233 @@
+% Don't touch this %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in,headheight=3ex,headsep=3ex]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+
+\newcommand{\blankline}{\quad\pagebreak[2]}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Modify Course title, instructor name, semester here %%%%%%%%
+
+\title{151H: Honors Introductory Biology II}
+\author{April Wright}
+\date{Spring, 2020}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't touch this %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[sc]{mathpazo}
+\linespread{1.05} % Palatino needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+\usepackage[mmddyyyy]{datetime}% http://ctan.org/pkg/datetime
+\usepackage{advdate}% http://ctan.org/pkg/advdate
+\newdateformat{syldate}{\twodigit{\THEMONTH}/\twodigit{\THEDAY}}
+\newsavebox{\MONDAY}\savebox{\MONDAY}{Mon}% Mon
+\newcommand{\week}[1]{%
+%  \cleardate{mydate}% Clear date
+% \newdate{mydate}{\the\day}{\the\month}{\the\year}% Store date
+  \paragraph*{\kern-2ex\quad #1, \syldate{\today} - \AdvanceDate[4]\syldate{\today}:}% Set heading  \quad #1
+%  \setbox1=\hbox{\shortdayofweekname{\getdateday{mydate}}{\getdatemonth{mydate}}{\getdateyear{mydate}}}%
+  \ifdim\wd1=\wd\MONDAY
+    \AdvanceDate[7]
+  \else
+    \AdvanceDate[7]
+  \fi%
+}
+\usepackage{setspace}
+\usepackage{multicol}
+%\usepackage{indentfirst}
+\usepackage{fancyhdr,lastpage}
+\usepackage{url}
+\pagestyle{fancy}
+\usepackage{hyperref}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{layout}
+
+\lhead{}
+\chead{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Modify header here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\rhead{\footnotesize Text in header}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Don't touch this %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lfoot{}
+\cfoot{\small \thepage/\pageref*{LastPage}}
+\rfoot{}
+
+\usepackage{array, xcolor}
+\usepackage{color,hyperref}
+\definecolor{clemsonorange}{HTML}{EA6A20}
+\hypersetup{colorlinks,breaklinks,linkcolor=clemsonorange,urlcolor=clemsonorange,anchorcolor=clemsonorange,citecolor=black}
+
+\begin{document}
+
+\maketitle
+
+\blankline
+
+\begin{tabular*}{.93\textwidth}{@{\extracolsep{\fill}}lr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Modify information %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+E-mail: \texttt{april.wright@selu.edu}  \\
+
+ Office Hours: M 9:15-11:15am, W 9:15-11:15am, Th 1-4pm  and by appointment 
+ 
+ Class Hours: M/W 8-9:15pm \\
+
+ Office: Biology Building 403 & Class Room: Fayard Hall 122 \\
+\hline
+\end{tabular*}
+
+\vspace{5 mm}
+
+% First Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Course Description}
+
+This course will introduce you to the fundamental evolutionary and ecological principles that underly life on Earth, as well as to the major groups of organisms we see. This course will be taught in a code-to-learn framework, with data skills and quantitative thinking emphasized throughout.
+
+
+% Second Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Required Materials}
+
+\begin{itemize}
+\item Course notes available on Moodle. 
+\end{itemize}
+
+% Fourth Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Course Objectives}
+Successful students:
+\begin{enumerate}
+\item Explain how variation among organisms leads to evolution
+\item Understand core concepts in how favorable traits are passed from generation to generation
+\item Use ecological theory to understand where we find organisms and why
+\item Know features of the major groups of animal, plant, bacterial, and archean life
+\end{enumerate}
+
+% Fifth Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Course Structure}
+
+\subsection*{Assessments}
+
+There will be three exams, each worth 100 points. The final will be worth 100 points.
+
+\subsubsection*{Lecture}
+
+Each lecture day will have a small activity to be turned in, worth 2 points. 
+
+
+\subsubsection*{Homework}
+
+Each week, there will be a homework due at 5 pm Friday worth 10 points. Each homework will be worth ten points. Because these are posted a week in advance, and cover the prior week's material, these cannot be made up without speaking to me first.
+
+\subsection*{Grading Policy}
+The typical Southeastern biology grading scale will be used. I reserve the right to curve the scale dependent on overall class scores at the end of the semester. Any curve will only ever make it easier to obtain a certain letter grade.
+
+% Fifth Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+
+% Course Schedule %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\section*{Schedule and weekly learning goals}
+
+The schedule is tentative and subject to change. The learning goals below should be viewed as the key concepts you should grasp after each week
+
+% Set first date of the semester (for some reason this is a week before what comes up, but that's easy to get around)
+\SetDate[13/01/2020]
+\week{Week 01} Set-Up
+\begin{itemize}
+\item Course Policies
+\item Starting R
+\end{itemize}
+
+\week{Week 02} Variation
+\begin{itemize}
+\item How do individuals differ from one another?
+\item What causes differentiation?
+\item Punnett Squares and heritability
+\end{itemize}
+
+\week{Week 03} Natural Selection 
+\begin{itemize}
+\item How does natural selection act on variation?
+\item How can we predict which alleles will be favorable at variation?
+\end{itemize}
+
+\week{Week 04} Other types of evolution
+\begin{itemize}
+\item How does sexual selection reduce variation? 
+\item What is a bottleneck?
+\end{itemize}
+
+\week{Week 05} Exam 1
+\begin{itemize}
+\item Exam One Monday the 17th
+\end{itemize}
+
+\week{Week 06} Mardi Gras
+
+
+\week{Week 07} Principles of Ecology
+\begin{itemize}
+\item Where do nutrients come from?
+\item How does geology interact with the environment?
+\end{itemize}
+
+\week{Week 08} Principles of Organisms
+\begin{itemize}
+\item What is a food web, and who ends up on top?
+\item What factors predict food web stability?
+\end{itemize}
+
+\week{Week 09} Humans and the Environment
+\begin{itemize}
+\item How are humans changing the atmosphere?
+\item How are humans changing the land and oceans?
+\end{itemize}
+
+\week{Week 10} Exam 2
+\begin{itemize}
+\item Exam 2 Monday
+\end{itemize}
+
+\week{Week 11} Phylogeny
+\begin{itemize}
+\item How do you read a phylogeny?
+\item What does a phylogeny tell you?
+\end{itemize}
+
+\week{Week 12} Animal Diversity
+\begin{itemize}
+\item Invertebrates
+\end{itemize}
+
+
+\week{Week 13} Break
+
+\week{Week 14} Animal Diversity
+\begin{itemize}
+\item Vertebrates
+\end{itemize}
+
+\week{Week 15} Bacteria \& Archaea
+
+
+\week{Week 16} Exam 3 Monday 4
+
+
+\week{May 14, 8 am} \textbf{Final Exam}
+
+\end{document}
