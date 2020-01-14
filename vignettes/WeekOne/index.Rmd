@@ -7,9 +7,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Bio 151H
+## Bio 153H
 
-Welcome to Bio151H! This semester, we will discuss the fundamental principles that underly the amazing breadth of animals, plants, and microbes that we see on Earth.
+Welcome to Bio153H! This semester, we will discuss the fundamental principles that underly the amazing breadth of animals, plants, and microbes that we see on Earth.
 
 This will be a unique class experience, in that we won't just be learning biology, we'll be using computation and data analysis alongside these concepts to enhance our understanding of the biology.
 
@@ -39,8 +39,9 @@ We're going to try some very, very simple R exercises.
 
 First, let's read in some data.
 
-```
-masses <- read_csv("BodyMassData.csv")
+```{r}
+library(tidyverse)
+masses <- read_csv("data/BodyMassData.csv")
 ```
 
 What we've done in the above command is read in a data file that is on our computers, and assign it to a variable. A variable is something in the computer's memory. Think of it like labeling your leftovers in the fridge. Later on, when we want to use the data, we call it back using the name.
@@ -52,10 +53,8 @@ Talk to the person next to you for a moment. How do you think body mass interact
 
 We're going to test this now by plotting the data.
 
-```
-ggplot(final, mapping = aes(x = Latitude, y = Mass)) +
-    geom_point() 
-    
+```{r}
+plot(masses$Latitude, masses$Mass)    
 ```
 
 Discussion question:
