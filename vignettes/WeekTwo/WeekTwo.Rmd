@@ -59,7 +59,6 @@ Answer here
 ```
 
 Let's put this to the test. In the study of biology, we can quantify differences between groups using a Chi-Squared test. The Chi-Squared test allows us to tell if two or more groups are really different. It uses the distribution of data points to tell this information. For example, our boxplots overlap a little, but not all the way. Is that overlap significant? A Chi-Square test lets us tell. We can then calculate a P-value. This value tells us, if the groups are actually identical, how likely we would be to observe a difference. If your generation has the same distribution of heights, how likely are we to observe these differences.
-
 ```{r}
 heights %>% 
 group_by(generation) %>% 
@@ -67,5 +66,3 @@ ungroup %>%
 summarise(pval = chisq.test(height, generation)$p.value)
 
 ```
-
-
