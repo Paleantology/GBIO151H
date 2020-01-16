@@ -3,7 +3,7 @@
  | Date | Activity | Homework |
  |:----------------------:|:--------:|:--------:|
  | Week 01, 01/20 - 01/24 |  [Set-Up](https://paleantology.github.io/GBIO153H/articles/WeekOne/index.html) | No |
- | Week 02, 01/27 - 01/31 | [Variation](https://paleantology.github.io/GBIO153H/articles/WeekOne/index.html) | Variation Assignment |
+ | Week 02, 01/27 - 01/31 | [Variation](https://paleantology.github.io/GBIO153H/articles/WeekTwo/index.html) | Variation Assignment |
  | Week 03, 02/03 - 02/07 |  Natural Selection | TBA |
  | Week 04, 02/10 - 02/14 | Other types of evolution | TBA |
  | Week 05, 02/17 - 02/21 | Exam 1 | No |
