@@ -66,3 +66,12 @@ ungroup %>%
 summarise(pval = chisq.test(height, generation)$p.value)
 
 ```
+
+
+## Variation Assignment
+
+By now we should have clearly demonstrated that individual organisms within populations demonstrate considerable variation across a wide variety of traits. Some of these traits are easier to quantify than others, but the point remains that no two individuals are quite alike. What are the implications of variation? Do these variations have any impact on how an organism interacts with its environment? To get started in thinking about this, you will be observing some stuffed bird specimens and taking note of some important traits and how they vary. 
+
+At the Main Entrance to the Biology Building (now Thelma Ryan Hall), there is a display case with four different birds. Another display case can be found in the same building at the entrance to the vertebrate museum with another four birds. Select three different traits (e.g. body coloration, beak size, etc.) and try to develop 3 sets of hypotheses explaining how the variable traits allow the various bird species to interact with their enviroments in unique ways. For example: Birds with darker feathers (species A, B, and C) are more likely to be found in cooler climates where their dark coloration can absorb more heat.
+
+Please write a one page report detailing your hypotheses.
