@@ -13,14 +13,14 @@ learnPopGen::phenotype.freq(nloci = 1)
 
 Why does the plot look like this?
 
-```{r, eval=False}
+```{r, eval=FALSE}
 Your answer here
 ```
 
 What happens when you increase the number of loci to 2? To 4? What is the relationship between number of loci and the number of phenotypes?
 
 
-```{r, eval=False}
+```{r, eval=FALSE}
 Your answer here
 ```
 
@@ -39,20 +39,20 @@ By 100 generations, everyone is big A!
 What if it was really bad to have the recessive homozygous genotype? Try another value for the fitness of the homozygote recessive. Below, note what value you chose for the homozygous recessive and how long it took for big A to be the only allele in the population?
 
 
-```{r, eval = False}
+```{r, eval = FALSE}
 Answer here
 ```
 
 The type of selection we have simulated is **directional selection**: the favoring of one allele and phenotype over another. Can you find a set of condictions in which directional selection does not lead to the loss of one allele?
 
-```{r, eval = False}
+```{r, eval = FALSE}
 Answer Here
 ```
 
 What if one homozygote is not the most fit? If the heteozygote is the most fit, do we preserve variation? Why or why not?
 
 
-```{r, eval = False}
+```{r, eval = FALSE}
 Answer here
 ```
 
@@ -68,7 +68,7 @@ phenotype.selection(nloci = 2, beta = 0.1, ngen = 100)
 
 What do you think beta is in this function? If you're having a hard time, try making beta negative. Does this help clarify?
 
-```{r, eval = False}
+```{r, eval = FALSE}
 
 Answer here
 
