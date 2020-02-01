@@ -1,0 +1,92 @@
+---
+title: "Viral Evolution"
+output: html_document
+---
+If you've been watching the news, you might be aware that we're in the midst of an epidemic. Coronavirus has been spreading across the globe. First reported as a possible epidemic in China, many more countries are reporting cases. Today, we're going to track the spread of this virus on the planet.
+
+First, we're going to install a mapping program.
+
+```{r}
+install.packages("leaflet")
+```
+
+Now, we'll download some data on localities in which Coronavirus has been detected. We have two datasets: One from Hubei, the province in which the city where Coronavirus was first reported (Wuhan), and from outside Hubei.
+
+```{r, eval = FALSE}
+Downloads here
+```
+
+Take a look at these files. What info has been collected?
+
+```{r}
+library(tidyverse)
+inside_hubei <- read_csv("data/ncov_hubei.csv")
+outside_hubei <- read_csv("data/ncov_outside_hubei.csv")
+
+```
+
+Let's first try to get a handle on if there really are increasing cases of Coronavirus:
+
+```{r}
+inside_hubei %>% 
+  drop_na(date_confirmation) %>% 
+  ggplot(mapping = aes(x=date_confirmation, y=ID)) + geom_line()
+```
+
+
+Uh-oh. What is the problem here? Have a look at the date of first symptom onset column:
+
+```{r}
+inside_hubei$date_confirmation
+```
+
+These are all in quotation marks - R thinks this is text. We can fix that really quick with a date conversion library.
+
+```{r}
+
+library(lubridate)
+inside_hubei$new_dates <- dmy(inside_hubei$date_confirmation)
+
+```
+
+
+Now try your plotting again.
+
+```{r}
+outside_hubei %>% 
+  drop_na(date_confirmation) %>% 
+  ggplot(mapping = aes(x=date_confirmation, y=ID)) + geom_line() 
+```
+
+
+Hard to read! Let's try angling the text.
+
+```{r}
+outside_hubei %>% 
+  drop_na(date_confirmation) %>% 
+  ggplot(mapping = aes(x=date_confirmation, y=ID)) + geom_line() + theme(axis.text.x = element_text(colour = "grey20", size = 12, angle = 90))
+```
+
+With a partner: these two graphs look different. What are they telling you about the origin and timing of the epidemic? 
+
+Let's take a look now at the global distribution of the virus:
+
+
+```{r}
+library(leaflet)
+
+outside_hubei %>% 
+  drop_na(latitude) %>% 
+  drop_na(longitude) %>% 
+  leaflet::leaflet() %>% 
+  addTiles() %>% 
+  addMarkers(~latitude, ~longitude, popup = ~as.character(longitude))
+
+```
+
+That looks a bit weird. What do you think happened here?
+
+```{r}
+outside_hubei %>% 
+  filter(latitude < -40)
+```

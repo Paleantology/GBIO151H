@@ -4,7 +4,7 @@
  |:----------------------:|:--------:|:---------------------:|:--------:|
  | Week 01, 01/20 - 01/24 |  [Set-Up](https://paleantology.github.io/GBIO153H/articles/WeekOne/index.html) | None | No |
  | Week 02, 01/27 - 01/31 | [Variation](https://paleantology.github.io/GBIO153H/articles/WeekTwo/WeekTwo.html) | [Slides](https://docs.google.com/presentation/d/13ZDmNT892GzCTZvbCErx3AlQ2B90qsjv0WTf3gRBoQw/edit?usp=sharing) | Variation Assignment |
-| Week 03, 02/03 - 02/07 |  [Natural Selection](https://paleantology.github.io/GBIO153H/articles/WeekThree/WeekThreeSelection.html) | | TBA |
+| Week 03, 02/03 - 02/07 |  [Natural Selection](https://paleantology.github.io/GBIO153H/articles/WeekThree/WeekThreeSelection.html) | [Slides](https://docs.google.com/presentation/d/1-rvN-m6c4KogwZIQmZ0BPZ7xIrujVyWOWoYTC-DYgq0/edit?usp=sharing) | TBA |
  | Week 04, 02/10 - 02/14 | Other types of evolution | | TBA |
  | Week 05, 02/17 - 02/21 | Exam 1 | | No |
  | Week 06, 02/24 - 02/28 | Mardi Gras | | No | 
