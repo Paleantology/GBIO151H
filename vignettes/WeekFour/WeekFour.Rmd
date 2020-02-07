@@ -1,0 +1,102 @@
+---
+title: "WeekFour"
+output: html_document
+---
+
+This week, we're going to be disease detectives. There is an ongoing outbreak of novel Coronavirus strain causing illness across China, and in other international destinations. Often abbreviated nCov, this is just one strain of many strains.
+
+The federal government keeps an online database of DNA sequences collected in federally-funded research. The [National Center for Biotechnology Information](https://www.ncbi.nlm.nih.gov/) stores these sequences in a database.
+
+Today, we will install a search functiont to access the federal databases, and we will use them to understand how molecular identification of viruses works. 
+
+```{r setup, eval=FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+install.packages("BiocManager")
+BiocManager::install(version = "3.10")
+BiocManager::install(c("Biostrings"))
+install.packages("devtools")
+install.packages("leaflet")
+devtools::install_github("mhahsler/rBLAST")
+download.file(url = "ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.10.0/ncbi-blast-2.10.0+-x64-linux.tar.gz", destfile = "blast_sw.tar.gz", mode = 'wb')
+untar("blast_sw.tar.gz", exdir = "blast")
+Sys.setenv(PATH = paste(Sys.getenv("PATH"), "/cloud/project/blast/ncbi-blast-2.10.0+/bin/", sep= .Platform$path.sep))
+install.packages("taxize")
+
+```
+
+The above installed search functions to interact with the databases. Now, we are going to obtain the molecular sequence data. These data were collected over the course of many years. While the outbreak is new, the relatives of the outbreak strain have been around much longer.
+
+```{r, eval=FALSE}
+download.file(url = "ftp://ftp.ncbi.nlm.nih.gov/blast/db/Betacoronavirus.tar.gz", destfile = "CoronaVirus.tar.gz", mode = 'wb')
+untar("CoronaVirus.tar.gz", exdir = "coronavirus_db")
+
+```
+
+
+Now, each of you is holding a url. Use the `download.file()` function to download your viral sequence. Where do you think it should be saved? 
+The way we establish the identity of a sequence using DNA is called BLAST. When we do a BLAST search, we compare a sequence of nucleotides or amino acids to a database to search for significant matches. But what is a significant match? Does a certain percentage sequence identity mean two sequences are the "same"? In front of you, each pair has a 4-sided die. Decide which number will respresent A, C, G, and T. Each partner roll the die 20 times, writing down your DNA sequence as you go. 
+
+How many nucleotides are the same between your two sequences? 
+
+But sequences are _not_ random. You will share more sequence similarity with your siblings than you will with me. You'll be more similar to me than a chimpanzee, and more similar to me and the chimpanzee than to a fish. When we're doing identification, we need to be aware that there may be sequences that are closely related, but not exactly, our sequence. Additionally, it's going to be far easier to match short sequences than long ones. This is dangerous for us in particular as viral genomes are often small. Our coronavirus sequence is 3000 base pairs. The human genome is 3.5 billion. You could fit the coronavirus genome over a million times into our genome. In a million tries, will there be some regions in our genome that look like coronavirus by chance? Yes.
+
+## Activity
+
+First, we're going to read in our mystery viral sequence:
+
+
+```{r, results = 'hide' }
+library(Biostrings)
+mystery_seq <- readDNAStringSet("data/MysterVirus.fasta")
+```
+
+Print your data to the screen. What does it look like? This is what a DNA sequence looks like to a computer - simply letters in a file.
+
+Next, we will search the the database of Betacoronavirus. The government made a specialized, smaller database available for researchers and clinicians to access during the outbreak.
+
+```{r, results = 'hide'}
+library(rBLAST)
+bl <- blast(db = "/cloud/project/coronavirus_db/Betacoronavirus")
+```
+
+Take a look at the `bl` object. What does it tell you? 
+
+
+Next, we can going to compare our sequence to the sequences in the database. We will use the function `predict` to predict the identity of our sequence based on the DNA information in the database. Our search term is phrased as mystery_seq[1] because we are *indexing* the file. We will take only the first sequence in the file. If this were a true clinical scenario, you might have multiple copies of the sequence to ensure accuracy.
+
+```{r}
+cl <- predict(bl, mystery_seq[1,])
+```
+
+Print this dataframe to the screen. Let's talk through each column.
+
+So we have some strong matches. But they're stored in this weird format - how do we know what organism gave us these sequences? Luckily, there is an R package called `taxize` that can help us figure out what the actual strain is. The function `genbank2uid` transfers GenBank names to universal identifiers. Paste your highest-scoring isolate SubjectID into the argument.
+
+
+```{r}
+library(taxize)
+genbank2uid("NC_045512.2")
+```
+
+We can even do something clever like look at all the top-scoring matches by filtering for exact matches and significant E-values.
+
+```{r}
+library(tidyverse)
+matches <- cl %>% 
+  filter(Mismatches == 0 & E < .005)
+genbank2uid(matches$SubjectID)
+```
+
+Researchers have been busy collecting this information!
+
+Lastly, I don't want you all to be too freaked out about Coronavirus. Let's take a quick look at where we actually find cases.
+
+```{r}
+library(leaflet)
+
+nCov <- read_csv("data/ncov_outside_hubei.csv")
+nCov %>% 
+  leaflet::leaflet() %>% 
+  addTiles() %>% 
+  addMarkers()
+```
