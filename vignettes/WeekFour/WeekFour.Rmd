@@ -7,9 +7,9 @@ This week, we're going to be disease detectives. There is an ongoing outbreak of
 
 The federal government keeps an online database of DNA sequences collected in federally-funded research. The [National Center for Biotechnology Information](https://www.ncbi.nlm.nih.gov/) stores these sequences in a database.
 
-Today, we will install a search functiont to access the federal databases, and we will use them to understand how molecular identification of viruses works. 
+Today, we will install a search function to access the federal databases, and we will use them to understand how molecular identification of viruses works. 
 
-```{r setup, eval=FALSE}
+```{r setup}
 if (!requireNamespace("BiocManager", quietly = TRUE))
 install.packages("BiocManager")
 BiocManager::install(version = "3.10")
@@ -20,6 +20,7 @@ devtools::install_github("mhahsler/rBLAST")
 download.file(url = "ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.10.0/ncbi-blast-2.10.0+-x64-linux.tar.gz", destfile = "blast_sw.tar.gz", mode = 'wb')
 untar("blast_sw.tar.gz", exdir = "blast")
 Sys.setenv(PATH = paste(Sys.getenv("PATH"), "/cloud/project/blast/ncbi-blast-2.10.0+/bin/", sep= .Platform$path.sep))
+Sys.getenv("PATH")
 install.packages("taxize")
 
 ```
@@ -34,6 +35,10 @@ untar("CoronaVirus.tar.gz", exdir = "coronavirus_db")
 
 
 Now, each of you is holding a url. Use the `download.file()` function to download your viral sequence. Where do you think it should be saved? 
+```{r, eval = FALSE}
+download.file(URL = , destile = )
+```
+
 The way we establish the identity of a sequence using DNA is called BLAST. When we do a BLAST search, we compare a sequence of nucleotides or amino acids to a database to search for significant matches. But what is a significant match? Does a certain percentage sequence identity mean two sequences are the "same"? In front of you, each pair has a 4-sided die. Decide which number will respresent A, C, G, and T. Each partner roll the die 20 times, writing down your DNA sequence as you go. 
 
 How many nucleotides are the same between your two sequences? 
@@ -45,9 +50,9 @@ But sequences are _not_ random. You will share more sequence similarity with you
 First, we're going to read in our mystery viral sequence:
 
 
-```{r, results = 'hide' }
+```{r}
 library(Biostrings)
-mystery_seq <- readDNAStringSet("data/MysterVirus.fasta")
+mystery_seq <- readDNAStringSet("data/MysteryVirus2.fasta")
 ```
 
 Print your data to the screen. What does it look like? This is what a DNA sequence looks like to a computer - simply letters in a file.
@@ -100,3 +105,6 @@ nCov %>%
   addTiles() %>% 
   addMarkers()
 ```
+
+
+## Homework: Exam review HW will open on Moodle this afternoon
