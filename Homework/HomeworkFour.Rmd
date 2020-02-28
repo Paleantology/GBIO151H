@@ -8,7 +8,7 @@ First, download your homework. In your RStudio, enter:
 
 ```{r, eval=FALSE}
 dir.create("Homework")  
-download.file("https://raw.githubusercontent.com/BiologicalDataAnalysis2019/2019/master/homeworks/HomeworkOne.Rmd", destfile = "Homework/HomeworkOne.Rmd")
+download.file("https://raw.githubusercontent.com/Paleantology/GBIO153H/master/Homework/HomeworkFour.Rmd", destfile = "Homework/HomeworkOne.Rmd")
 download.file("https://raw.githubusercontent.com/BiologicalDataAnalysis2019/2019/master/data/surveys.csv", destfile="data/surveys.csv")
 ```
 
