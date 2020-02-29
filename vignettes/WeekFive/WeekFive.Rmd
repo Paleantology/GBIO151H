@@ -1,0 +1,96 @@
+---
+title: "Phenology"
+output: html_document
+---
+
+# For Wednesday:
+
+Please have a look at [this](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2656.12373) paper. It explains the relationship between air temperature, butterfly emergence, and plant flowering.
+
+
+##  Phenology 
+
+Phenology is the study of when events happen in organisms' life cycles. For example, the first flowering of a plant for the year, or the emergence of forager bees. Typically, organisms take cues from their environment. Commonly, these are changes such as photoperiod (how much light there is per day) or temperature. 
+
+When organisms that rely on one another fall out of sync, it can be a problem. For example, if a plant starts to flower when the soil is warm enough, this will often occur after a period of warmer air temperatures because soil has a higher heat capacity than air. What happens to the bees when they emerge and don't find any food? This is called *ecological mismatch*. Originally described in 2004 by Winder and Schindler, ecological mismatch can mean that one or both species don't have their needs met by the environment. 
+
+What we're going to do today is look at some historical and present-day ecological data. What were the temperatures historically? And when did butterflies erupt from their cocoons? Butterflies need to be warm to incubate, exit the coccoon and go into flight. 
+
+Briefly, with a partner, discuss the Kharouba and Veland paper. Answer the following:
+
+1. What are the three objectives the authors stated in their introduction?
+
+
+
+2. What are the three main sources of data used in this study?
+
+
+
+3. Starting on page 1314, the authors discuss the limitations of collections-based data as opposed to direct field observation. What were the limitations? How could the use of natural history collections-based data affect the study?
+
+
+
+# Activity
+
+## First, we need some data
+
+```{r}
+download.file(url = "https://raw.githubusercontent.com/Paleantology/GBIO153H/master/data/Butterfly_data.csv", destfile = "data/Butterfly_data.csv")
+download.file(url = "https://raw.githubusercontent.com/Paleantology/GBIO153H/master/data/Phenology_data.csv", destfile = "data/Phenology_data.csv")
+```
+
+## Next, let's read in both the butterfly and phenology datasets
+
+```{r}
+library(tidyverse)
+# Practice using read_csv to read in the data
+```
+
+
+## Let's take a peek at how many species are in this dataset:
+
+
+```{r, eval=FALSE}
+butterfly_data %>% 
+select(ButterflySpecies) %>% 
+unique()
+```
+
+## Now, let's look at the annual temperature over time:
+
+Below is a *faded* example- I've given you some code, but not all of it. Figure out which dataset and which columns you'll need to plot temperature over time.
+
+```{r, eval = FALSE}
+library(ggplot2)
+ggplot(, aes(, )) + geom_point()
+```
+
+
+It looks like there might be a relationship between these two things. We'll check this with a *linear regression*. A linear regression shows us how to variables are related to one another. Take your ggplot command from these previous command, then add the command for linear regression. In this case, we are assuming a *simple linear regression*, in which one term describes the relationship between two quantities.
+
+
+```{r, eval = FALSE}
+library(ggplot2)
+ggplot(, aes(, )) + geom_point() + geom_smooth(method='lm', formula= y~x)
+```
+
+# Let's take a look at the actual butterflies.
+
+If butterflies emerge based on temperature, what would we expect to be the relationship between Spring temperature and day of emergence? Summer temperature and day of emergence? Year and day? Test all three out below.
+
+```{r, eval=FALSE}
+
+ ggplot(butterfly_data, aes(, Day)) + geom_point()
+
+```
+
+As a last exercise, we can look at the same plot, but with each species colored differently?
+
+```{r, eval=FALSE}
+ggplot(butterfly_data, aes(SpringTemp, Day, color = ButterflySpecies)) + geom_point() +geom_smooth(method='lm', formula=y~x, se = FALSE) 
+
+```
+
+If this were your research question, what other information would you want to collect?
+
+
