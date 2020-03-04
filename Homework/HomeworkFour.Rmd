@@ -36,6 +36,8 @@ library(tidyverse)
 Save the `hindfoot_length` column to its own variable, called `hindfoot_vector`.
 ```{r}
 #Enter your answer for Question 3 here
+# Hint: Take a look at the help page for `select` by typing ?select
+# Could you use this? 
 
 ```
 
