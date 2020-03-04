@@ -66,6 +66,7 @@ Test your idea about why it didn't work by writing some code that will fix the p
 I have written some code to calculate the mean of the hindfoot. But it's not working! Correct my code. 
 
 ```{r eval=FALSE}
+# Hint: look at the hindfoot vetor object. Did we get the right column?
 surveys <- read.csv("data/surveys.csv")
 hindfoot_vector <- surveys[7]
 hindfoot_mean <- (sum(hindfoot_vector)/length(hindfoot_vector))
