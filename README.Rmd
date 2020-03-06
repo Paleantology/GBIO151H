@@ -9,7 +9,7 @@
  | Week 05, 02/17 - 02/21 | Exam 1 | | No |
  | Week 06, 02/24 - 02/28 | Mardi Gras | | No | 
  | Week 07, 03/02 - 03/06 | [Principles of Ecology](https://paleantology.github.io/GBIO153H/articles/WeekFive/WeekFive.html) | [Slides](https://docs.google.com/presentation/d/1Lz9Ootaq-qWylTEVF20dzp79ab3eNdP1SsffzMgErMQ/edit?usp=sharing) | [R exercise](https://paleantology.github.io/GBIO153H/Homework/HomeworkFour.html) |
- | Week 08, 03/09 - 03/13 | Principles of Organisms | | TBA |
+ | Week 08, 03/09 - 03/13 | [Principles of Organisms](https://docs.google.com/presentation/d/1jToCyFOZjBRhhBWClJOo6ZgPZQeNGx9pN2EPyuN-y9o/edit?usp=sharing) | | On Moodle, Due March 12 |
  | Week 09, 03/16 - 03/20 | Humans and the Environment | | TBA |
  | Week 10, 03/23 - 03/27 | Exam 2 | | No |
  | Week 11, 03/30 - 04/03 | Phylogeny | | TBA |
