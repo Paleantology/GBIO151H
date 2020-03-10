@@ -1,0 +1,55 @@
+---
+title: "Week Six: Revenge of the Whales"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Where do aquatic organisms live?
+
+Besides the water, of course. The first week of class, we tested the hypothesis that body mass would be related to the latitude at which we find an organism. We call thsi Bergmann's rule. We've seen other types of adaptations in class - for example, C3 plants need to be in cooler environments. But this didn't seem to hold true for our whale dataset. We're going to explore why or why not today.
+
+First, read in the data file that we had downloaded that first week. It is in your data folder, and is called "BodyMassData.csv".
+
+```{r eval=FALSE}
+library(tidyverse)
+
+masses <- read_csv("")
+
+```
+
+Double-click on the CSV file to look at it. Refamiliarize yourself briefly with what is in here.
+
+## Relationship between body mass and latitude
+
+
+Previously, we had looked for a relationship between body mass and latitude. Try plotting our whale data using ggplot. We want this to be a dot plot. We should also add a linear regression. I've included this below as a fill-in-the-blanks activity. Feel free to consult previous weeks' lessons to find the right functions.
+
+```{r eval=FALSE}
+ggplot(masses, aes(_____ , ______)) + geom______() + stat______()
+```
+
+
+Last week, we talked about disaggregation and how disaggregating can help you see smaller-scale patterns in data. Let's try breaking apart this dataset by species. Perhaps, as last week, different species show different patterns.
+
+```{r eval=FALSE}
+ggplot(masses, aes(____, _____, color=_____)) + geom______() + stat_____()
+```
+
+Lastly, take a look at the weights in the data file. What do you notice about them, per species? We're going to try one last analysis to see if we can solve this problem.
+
+
+```{r eval=FALSE}
+masses %>% 
+  group_by(species) %>% 
+  drop_na() %>% 
+  summarize(mean_lat = mean(Latitude), mean_wgt = mean(Mass)) %>% 
+  ggplot(aes(mean_lat, mean_wgt)) + geom_point() + stat_smooth()
+```
+
+
+## To Turn in:
+
+With a partner, do you believe that whales show Bermann's rule? If not, what biological mechanisms might account for no relationship? If so, what factors might cause this relationship to be obscured in our data?
