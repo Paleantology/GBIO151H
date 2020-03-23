@@ -10,8 +10,8 @@
  | Week 06, 02/24 - 02/28 | Mardi Gras | | No | 
  | Week 07, 03/02 - 03/06 | [Principles of Ecology](https://paleantology.github.io/GBIO153H/articles/WeekFive/WeekFive.html) | [Slides](https://docs.google.com/presentation/d/1Lz9Ootaq-qWylTEVF20dzp79ab3eNdP1SsffzMgErMQ/edit?usp=sharing) | [R exercise](https://paleantology.github.io/GBIO153H/Homework/HomeworkFour.html) |
  | Week 08, 03/09 - 03/13 | [Principles of Organisms](https://paleantology.github.io/GBIO153H/articles/WeekSix/WeekSix.html) | [Slides](https://docs.google.com/presentation/d/1jToCyFOZjBRhhBWClJOo6ZgPZQeNGx9pN2EPyuN-y9o/edit?usp=sharing) | On Moodle, Due March 12 |
- | Week 09, 03/16 - 03/20 | Humans and the Environment | | TBA |
- | Week 10, 03/23 - 03/27 | Exam 2 | | No |
+ | Week 09, 03/16 - 03/20 | [Humans and the Environment](https://docs.google.com/presentation/d/1J893wfAzOqRbEfxTIi7z0Pma2vM37tT6MG5DWK7R6_Y/edit?usp=sharing) | | [Slides](https://docs.google.com/presentation/d/1Axx4L5STZC3QqYiH8qzQmMIEywKFzCthfV18rrJW6KQ/edit?usp=sharing) | Review Assignment via moodle|
+ | Week 10, 03/23 - 03/27 | [SEIR](https://paleantology.github.io/GBIO153H/articles/WeekEight/SEIR.html)  | Exam 2 | No |
  | Week 11, 03/30 - 04/03 | Phylogeny | | TBA |
  | Week 12, 04/06 - 04/10 | Animal Diversity | | TBA |
  | Week 13, 04/13 - 04/17 | Break | | No | 
