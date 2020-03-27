@@ -1,0 +1,16 @@
+---
+title: "NextStrain"
+output: html_document
+---
+
+Today, we will be looking at the NextStrain [COVID-19](https://nextstrain.org/ncov) tracker. NextStrain is a website that uses genomes isolated from disease-bearing organisms to build phylogenetic trees. The trees can be used to assess patterns of transmission through time and space. 
+
+1. How many genomes have been used to make this phylogeny?
+
+2. Why are not all of the tips on this tree lined up? Why do some of them trunacte early?
+
+3. How many independent transmissions have there been to the US?
+
+4. Have there been transmissions from the US to other countries?
+
+5. Where are the major sources of the Australian strains of COVID-19?
