@@ -13,7 +13,7 @@
  | Week 09, 03/16 - 03/20 | [Humans and the Environment](https://docs.google.com/presentation/d/1J893wfAzOqRbEfxTIi7z0Pma2vM37tT6MG5DWK7R6_Y/edit?usp=sharing) | | [Slides](https://docs.google.com/presentation/d/1Axx4L5STZC3QqYiH8qzQmMIEywKFzCthfV18rrJW6KQ/edit?usp=sharing) | Review Assignment via moodle|
  | Week 10, 03/23 - 03/27 | [SEIR](https://paleantology.github.io/GBIO153H/articles/WeekEight/SEIR.html)  | Exam 2 | No |
  | Week 11, 03/30 - 04/03 | [Phylogeny](https://paleantology.github.io/GBIO153H/articles/WeekNine/NestStrain.html) | [Slides](https://docs.google.com/presentation/d/1cPiTrOoeaN-rhl9_2onLpoALg9QHJpB_oWsooFM1KBE/edit?usp=sharing) | No |
- | Week 12, 04/06 - 04/10 | Animal Diversity | | TBA |
+ | Week 12, 04/06 - 04/10 | Bacteria | [Slides](https://docs.google.com/presentation/d/1jRGtQxgyND504obwU6q_ekRgWW8CB5hqaIZafV7bQiI/edit?usp=sharing) | On Moodle - Due April 10 |
  | Week 13, 04/13 - 04/17 | Break | | No | 
  | Week 14, 04/20 - 04/24 | Animal Diversity | | TBA |
  | Week 15, 04/27 - 05/01 | Bacteria & Archaea | | TBA |
