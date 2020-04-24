@@ -17,7 +17,6 @@
  | Week 13, 04/13 - 04/17 | Break | | No | 
  | Week 14, 04/20 - 04/24 | Archaea | [Slides](https://docs.google.com/presentation/d/1ssdCGSKQ3csG2YX2F0r7tRif3rRm83uKDrklhxCaM8w/edit?usp=sharing) | TBA | 
   | Week 14, 04/20 - 04/24 | Plants | [Slides](https://docs.google.com/presentation/d/1XAoytYar7Bm_3PvuV68f3TpRJLsmqD_tZryW86lUhFg/edit?usp=sharing) | TBA | 
-
- | Week 15, 04/27 - 05/01 | Bacteria & Archaea | | TBA |
+ | Week 15, 04/27 - 05/01 | Fungi | [Slides](https://docs.google.com/presentation/d/159Y6JKx245AepPcSyoMls2_9T5G1SWnRyBH0HUwR7JY/edit?usp=sharing) | TBA |
  | Week 16, 05/04 - 05/08 | Exam 3 | | No |
 | May 14, 8 am | Final Exam | | No |
